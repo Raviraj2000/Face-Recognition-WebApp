@@ -9,9 +9,11 @@ import cv2
 from deepface.commons import functions
 from retinaface import RetinaFace
 import os
-from deepface.basemodels import Facenet512
+from deepface.basemodels import Facenet
 
-model = Facenet512.loadModel()
+
+model = Facenet.InceptionResNetV2(dimension = 512)
+model.load_weights('facenet512_weights.h5')
 
 class VideoProcessor:
     def __init__(self):
