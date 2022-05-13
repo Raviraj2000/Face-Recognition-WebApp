@@ -1,0 +1,7 @@
+opencv-python-headless
+streamlit
+streamlit-webrtc
+deepface
+numpy
+retina-face
+faiss-cpu
