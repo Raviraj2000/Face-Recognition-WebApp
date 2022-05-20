@@ -27,6 +27,7 @@ def play():
             
             faces = RetinaFace.detect_faces(img_path = frame)
             if faces == None:
+                print("No faces detected.")
                 return av.VideoFrame.from_ndarray(frame, format='bgr24')
             
           
