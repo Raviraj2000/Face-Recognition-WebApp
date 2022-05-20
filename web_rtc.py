@@ -55,11 +55,11 @@ def play():
  
             return av.VideoFrame.from_ndarray(frame, format='bgr24')
 
-    #webrtc_streamer(key="detector", video_processor_factory=VideoProcessor,
-                    #rtc_configuration={  # Add this line
-                    #"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
-                    #})
+    webrtc_streamer(key="detector", video_processor_factory=VideoProcessor,
+                    rtc_configuration={  # Add this line
+                    "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
+                    })
     
-    webrtc_streamer(key="detector", video_processor_factory=VideoProcessor)
+
 
     return
