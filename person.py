@@ -3,11 +3,11 @@ import streamlit as st
 from imageutils import loadImages
 import numpy as np
 import faiss
+from assets import loadModel
 
-def addPerson(name, model):
+def addPerson(name):
     #index = loadDB('database/faces.index')
-    model = model
-
+    model = loadModel()
     st.write("database and model loaded")
 
     facial_images = loadImages(name)
