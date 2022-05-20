@@ -1,5 +1,5 @@
 import faiss 
-from deepface.basemodels import Facenet512
+from deepface.basemodels import Facenet
 
 
 def loadDB(name):
