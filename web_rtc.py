@@ -23,9 +23,13 @@ def play():
         def recv(self, frame):
 
             frame = frame.to_ndarray(format="bgr24")
-
+            faces = None    
+            
             faces = RetinaFace.detect_faces(img_path = frame)
-
+            if faces == None:
+                return av.VideoFrame.from_ndarray(frame, format='bgr24')
+            
+          
             for face in faces:
                 x1, y1, width, height = faces[face]['facial_area']
                 x1, y1 = abs(x1), abs(y1)
