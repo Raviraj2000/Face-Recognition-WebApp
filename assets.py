@@ -11,5 +11,8 @@ def saveDB(index, index_name):
 
 
 def loadModel():
-    return Facenet512.loadModel()
+    model = Facenet.InceptionResNetV2(dimension = 512)
+    model.load_weights('facenet512_weights.h5')
+    #model = Facenet512.loadModel()
+    return model
 
