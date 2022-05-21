@@ -1,8 +1,8 @@
+numpy
+tensorflow-gpu==2.1.0
 opencv-python-headless
 streamlit
 streamlit-webrtc
 deepface
-numpy
 retina-face
 faiss-cpu
-tensorflow-gpu==2.1.0
