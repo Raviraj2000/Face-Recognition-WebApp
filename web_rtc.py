@@ -10,7 +10,6 @@ import os
 import threading
 from typing import Union
 
-@st.cache
 def play():
 
     class VideoProcessor(VideoTransformerBase):
