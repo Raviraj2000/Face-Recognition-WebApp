@@ -13,7 +13,7 @@ from deepface.basemodels import Facenet
 from video import whoisit
 from web_rtc import play
 
-@st.cache
+
 model = loadModel()
 
 name = st.text_input("Enter Name")
