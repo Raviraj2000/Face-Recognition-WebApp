@@ -5,4 +5,4 @@ deepface
 numpy
 retina-face
 faiss-cpu
-tensorflow-gpu
+tensorflow-gpu==2.1.0
