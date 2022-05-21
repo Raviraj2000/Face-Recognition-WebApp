@@ -5,9 +5,9 @@ import numpy as np
 import faiss
 from assets import loadModel
 
-def addPerson(name):
+def addPerson(name,model):
     #index = loadDB('database/faces.index')
-    model = loadModel()
+    #model = loadModel()
     st.write("database and model loaded")
 
     facial_images = loadImages(name)

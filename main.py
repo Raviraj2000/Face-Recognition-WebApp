@@ -13,6 +13,9 @@ from deepface.basemodels import Facenet
 from video import whoisit
 from web_rtc import play
 
+model = Facenet.InceptionResNetV2(dimension = 512)
+model.load_weights('facenet512_weights.h5')
+
 name = st.text_input("Enter Name")
 
 if name:
@@ -30,10 +33,10 @@ if name:
             st.error("Please Upload Files in png or jpg Format")
         else:     
             saveImages(name, images)
-            result= addPerson(name)
+            result= addPerson(name, model)
             st.write(result)
 
-play()
+play(model)
 
 
 
