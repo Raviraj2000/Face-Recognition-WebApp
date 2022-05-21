@@ -37,9 +37,8 @@ def play(model):
                 face = frame[y1:y2, x1:x2]
 
 
-                print("got co-ordinates")
                 image = np.array(face)
-                print('got face')
+
                 image = functions.preprocess_face(img = image,
                                                 target_size = (160,160),
                                                 detector_backend='opencv',
@@ -55,7 +54,6 @@ def play(model):
 
                 cv2.rectangle(frame, (x1,y1), (width, height), (255,0,255))
                 cv2.putText(frame, os.path.basename(self.names[i]), (x1,y1-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 1, cv2.LINE_AA)
-                print("finished")
             return av.VideoFrame.from_ndarray(frame, format='bgr24')
 
     webrtc_streamer(key="detector", video_processor_factory=VideoProcessor,
