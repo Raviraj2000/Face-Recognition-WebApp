@@ -10,7 +10,7 @@ def saveDB(index, index_name):
     faiss.write_index(index, index_name)
     return
 
-@st.cache
+
 def loadModel():
     model = Facenet.InceptionResNetV2(dimension = 512)
     model.load_weights('facenet512_weights.h5')
